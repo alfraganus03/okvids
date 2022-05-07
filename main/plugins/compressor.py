@@ -58,7 +58,7 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     _ps = "COMPRESS"
     if ps_name != "**COMPRESSING:**":
         _ps = "ENCODE"
-    log = await LOG_START(event, f'**{str(_ps)} PROCESS STARTED**\n\n[Bot is busy now]({SUPPORT_LINK})')
+    log = await LOG_START(event, f'**{str(_ps)} PROCESS STARTED**\n\n')
     log_end_text = f'**{_ps} PROCESS FINISHED**\n\n[Bot is free now]({SUPPORT_LINK})'
     try:
         await fast_download(n, file, Drone, edit, DT, "**DOWNLOADING:**")
@@ -171,7 +171,7 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     os.remove(name)
     os.remove(out2)
     await log.delete()
-    log_end_text2 = f'**{_ps} PROCESS FINISHED**\n\nTime Taken: {round((time.time()-DT)/60)} minutes\nInitial size: {i_size/1000000}mb.\nFinal size: {f_size/1000000}mb.\n\n[Bot is free now.]({SUPPORT_LINK})'
+    log_end_text2 = f'**{_ps} PROCESS FINISHED**\n\nTime Taken: {round((time.time()-DT)/60)} minutes\nInitial size: {i_size/1000000}mb.\nFinal size: {f_size/1000000}mb.\n\n)'
     await LOG_END(event, log_end_text2)
     
 
