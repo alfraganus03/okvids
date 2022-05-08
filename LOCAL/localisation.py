@@ -27,7 +27,7 @@ help_text = """**v1.4**
 
 •`Trim` - cut your videos"""
 
-source_text = "**t.me/Azizbek_03**"
+source_text = "**Xex**"
 
 DEV = "https://t.me/lfraganus"
 
